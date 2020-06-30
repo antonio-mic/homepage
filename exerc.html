@@ -56,60 +56,265 @@
             </div>
         </div>
     </main>
-    <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-        <title>"Exercícios JavaScript"</title>
-    
-    </head><body bgcolor="white">
-    
-        <center>
-            <h3>Crie um aplicativo que receba uma temperatura qualquer em Fahrenheit e apresente seu correspondente em
-                Celsius por meio de uma Função. Para o calculo utilize a seguinte fórmula: Celsius=5.0/9.0*(F-32)</h3>
-            <br>
-            <code>
-                    &lt;input type="number" id="nF"&gt;&lt;br&gt;&lt;br&gt;&lt;button onclick="converterCelsius(document.getElementById('nF').value)"&gt;Converter para Celsius&lt;/button&gt;&lt;p id="resultado"&gt;&lt;/p&gt;&lt;script&gt;function converterCelsius(F){
-                    var C=(5.0/9.0*(F-32));
-                    document.getElementById("resultado").innerHTML="A tempertura equivale à " + C + " graus celsius";
-                }
-            &lt;/script&gt;
-                </code>
-            <br><br>
-            <input type="number" id="nF">
-            <br>
-            <button onclick="converterCelsius(document.getElementById(&#39;nF&#39;).value)">Converter para Celsius</button>
-            <p id="resultado"></p>
-            <script>
-                function converterCelsius(F) {
-                    var C = (5.0 / 9.0 * (F - 32));
-                    document.getElementById("resultado").innerHTML = "A tempertura equivale à " + C + " graus celsius";
-                }
-            </script>
-            <br>
-            <br><br>
-            <h3>Imprima a tabela de tabuada de um determinado número</h3>
-            <br>
-            <code>
-                &lt;input type="number" id="num"&gt;&lt;br&gt;&lt;br&gt;&lt;button onclick="gerarTabuada(document.getElementById('num').value)"&gt;Gerar tabuada&lt;/button&gt;&lt;p id="tabuada"&gt;&lt;/p&gt;&lt;script&gt;function gerarTabuada(num){var str="Tabuada do &lt;strong&gt;" + num + "&lt;/strong&gt;: &lt;br&gt;";for(i=1; i&lt;=10; i++){str=str+num+"x"+i+" = "+(num*i)+"&lt;br&gt;";}document.getElementById("tabuada").innerHTML=str;}&lt;/script&gt;
-            </code>
-            <br><br>
-            <input type="number" id="num">
-            <br>
-            <button onclick="gerarTabuada(document.getElementById(&#39;num&#39;).value)">Gerar tabuada</button>
-            <p id="tabuada"></p>
-            <script>
-                function gerarTabuada(num) {
-                    var str = "Tabuada do <strong>" + num + "</strong>: <br>";
-                    for (i = 1; i <= 10; i++) {
-                        str = str + num + "x" + i + " = " + (num * i) + "<br>";
-                    }
-                    document.getElementById("tabuada").innerHTML = str;
-                }
-            </script>
-        </center>
-    
-    
-    
-    </body></html>
+    <footer>
+        <div class="lista">
+            <h1 class="tags">Atividades realizadas</h1>
+            <div>
+                <ul>
+                    <li>
+                        <h3 href="">Atividade 1</h3>
+                    </li>
+                    <div class="atividade_1">
+                        <button type="button" onclick="Evento_1()">Testar</button>
+                        <script>
+                            function Evento_1() {
+                                alert('Boa noite!')
+                            }
+                        </script>
+                    </div>
+                    <li>
+                        <h3 href="">Atividade 2</h3>
+                    </li>
+                    <div class="atividade_2">
+                        <button type="button" onclick="Evento_2()">Testar</button>
+                        <script type="text/javascript">
+                            function Evento_2() {
+                                prompt("Digite seu nome: ");
+                            }
+                        </script>
+                    </div>
+                    <li>
+                        <h3 href="">Atividade 3</h3>
+                    </li>
+                    <div class="atividade_3">
+                        <button type="button" onclick="Evento_3()">Testar</button>
+                        <script type="text/javascript">
+                            function Evento_3() {
+                                var user = prompt("Digite seu nome");
+                                alert("Olá " + user)
+                            }
+                        </script>
+                    </div>
+                    <li>
+                        <h3 href="">Atividade 4</h3>
+                    </li>
+                    <div class="atividade_4">
+                        <p> Entre com o número de 10 a 50</p>
+                        <input id="num1" type="number" min="10" max="50">
+                        <button onclick="validacao()">Ok</button>
+                        <p id="imprimi">Número válido!</p>
+                        <script>
+                            function validacao() {
+                                var mens = " ";
+                                if (document.getElementById("num1").validity.rangeOverflow) {
+                                    mens = "Número é maior!";
+                                }
+
+                                else if (document.getElementById("num1").validity.rangeUnderflow) {
+                                    mens = "Número é menor!";
+                                }
+
+                                else {
+                                    mens = "Número válido!";
+                                }
+                                document.getElementById("imprimi").innerHTML = mens;
+                            }
+                        </script>
+                    </div>
+                    <div class="lista_espacada">
+                        <div class="at-5">
+                            <li>
+                                <h3 href="">Atividade 5</h3>
+                            </li>
+                        </div>
+                        <div class="at-6">
+                            <li>
+                                <h3 href="">Atividade 6</h3>
+                            </li>
+                        </div>
+                        <div class="at-7">
+                            <li>
+                                <h3 href="">Atividade 7</h3>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="atividade_5">
+                        <p> digite o primeiro valor:</p>
+                        <input id="num1" type="number">
+                        <p> digite o segundo valor:</p>
+                        <input id="num2" type="number">
+                        <button onclick="compara()">ok</button>
+                        <script>
+                            function compara() {
+                                var n1 = document.getElementById("num1").value;
+                                var n2 = document.getElementById("num2").value;
+                                if (n1 < n2) { alert(n2 + " é maior!"); }
+                                else if (n2 < n1) { alert(n1 + " é maior!"); }
+                                else { alert("Os númereros são iguais"); }
+                            }
+                        </script>
+                    </div>
+                    <div class="atividade_6">
+                        <p> digite a temperatura a ser convertida </p>
+                        <input id="tem1" type="number">
+                        <button onclick="convercao()">ok</button>
+                        <p id="imprimir"></p>
+                        <script>
+                            function convercao() {
+                                var t1 = docment.getElementById("temp1").value;
+                                t1 = 5 / 9 * (t1 - 32);
+                                alert(t1);
+                            }
+                        </script>
+                    </div>
+                    <div class="atividade_7">
+                        <p> Digite um número para visualizar a sua tabuada</p> <input id="num1" type="number">
+                        <button onclick="tab()">ok</button>
+                        <script>
+                            var a = 1;
+                            function tab() {
+                                var b = document.getElementById("num1").value; for (cont = 0; cont < 10; cont++) {
+                                    for (conta = 0; conta <= 10; conta++) {
+                                        var result = a * b;
+                                        if (conta == 10) { document.write(b + "x" + a + "=" + result); document.write("<br>"); a++; }
+                                    }
+                                }
+                            }
+                        </script>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </footer><footer>
+        <div class="lista">
+            <h1 class="tags">Atividades realizadas</h1>
+            <div>
+                <ul>
+                    <li>
+                        <h3 href="">Atividade 1</h3>
+                    </li>
+                    <div class="atividade_1">
+                        <button type="button" onclick="Evento_1()">Testar</button>
+                        <script>
+                            function Evento_1() {
+                                alert('Boa noite!')
+                            }
+                        </script>
+                    </div>
+                    <li>
+                        <h3 href="">Atividade 2</h3>
+                    </li>
+                    <div class="atividade_2">
+                        <button type="button" onclick="Evento_2()">Testar</button>
+                        <script type="text/javascript">
+                            function Evento_2() {
+                                prompt("Digite seu nome: ");
+                            }
+                        </script>
+                    </div>
+                    <li>
+                        <h3 href="">Atividade 3</h3>
+                    </li>
+                    <div class="atividade_3">
+                        <button type="button" onclick="Evento_3()">Testar</button>
+                        <script type="text/javascript">
+                            function Evento_3() {
+                                var user = prompt("Digite seu nome");
+                                alert("Olá " + user)
+                            }
+                        </script>
+                    </div>
+                    <li>
+                        <h3 href="">Atividade 4</h3>
+                    </li>
+                    <div class="atividade_4">
+                        <p> Entre com o número de 10 a 50</p>
+                        <input id="num1" type="number" min="10" max="50">
+                        <button onclick="validacao()">Ok</button>
+                        <p id="imprimi">Número válido!</p>
+                        <script>
+                            function validacao() {
+                                var mens = " ";
+                                if (document.getElementById("num1").validity.rangeOverflow) {
+                                    mens = "Número é maior!";
+                                }
+
+                                else if (document.getElementById("num1").validity.rangeUnderflow) {
+                                    mens = "Número é menor!";
+                                }
+
+                                else {
+                                    mens = "Número válido!";
+                                }
+                                document.getElementById("imprimi").innerHTML = mens;
+                            }
+                        </script>
+                    </div>
+                    <div class="lista_espacada">
+                        <div class="at-5">
+                            <li>
+                                <h3 href="">Atividade 5</h3>
+                            </li>
+                        </div>
+                        <div class="at-6">
+                            <li>
+                                <h3 href="">Atividade 6</h3>
+                            </li>
+                        </div>
+                        <div class="at-7">
+                            <li>
+                                <h3 href="">Atividade 7</h3>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="atividade_5">
+                        <p> digite o primeiro valor:</p>
+                        <input id="num1" type="number">
+                        <p> digite o segundo valor:</p>
+                        <input id="num2" type="number">
+                        <button onclick="compara()">ok</button>
+                        <script>
+                            function compara() {
+                                var n1 = document.getElementById("num1").value;
+                                var n2 = document.getElementById("num2").value;
+                                if (n1 < n2) { alert(n2 + " é maior!"); }
+                                else if (n2 < n1) { alert(n1 + " é maior!"); }
+                                else { alert("Os númereros são iguais"); }
+                            }
+                        </script>
+                    </div>
+                    <div class="atividade_6">
+                        <p> digite a temperatura a ser convertida </p>
+                        <input id="tem1" type="number">
+                        <button onclick="convercao()">ok</button>
+                        <p id="imprimir"></p>
+                        <script>
+                            function convercao() {
+                                var t1 = docment.getElementById("temp1").value;
+                                t1 = 5 / 9 * (t1 - 32);
+                                alert(t1);
+                            }
+                        </script>
+                    </div>
+                    <div class="atividade_7">
+                        <p> Digite um número para visualizar a sua tabuada</p> <input id="num1" type="number">
+                        <button onclick="tab()">ok</button>
+                        <script>
+                            var a = 1;
+                            function tab() {
+                                var b = document.getElementById("num1").value; for (cont = 0; cont < 10; cont++) {
+                                    for (conta = 0; conta <= 10; conta++) {
+                                        var result = a * b;
+                                        if (conta == 10) { document.write(b + "x" + a + "=" + result); document.write("<br>"); a++; }
+                                    }
+                                }
+                            }
+                        </script>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/jquery-migrate.js"></script>
